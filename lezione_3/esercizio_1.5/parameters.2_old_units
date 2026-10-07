@@ -1,0 +1,8 @@
+nstep		50000
+print		10
+mass		1.0
+timestep	0.001
+harmonic	10.0
+distance	2.0
+initialfile	initialchain1D_old_units.xyz
+trajfile	/dev/null
