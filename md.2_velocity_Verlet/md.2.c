@@ -130,6 +130,27 @@ void calc_energies(){
 	etot=ekin+epot;
 }
 
+void remove_com_velocity(){
+	int i;
+	double vcmx=0, vcmy=0, vcmz=0, mtot=0;
+
+	// Compute the center of mass velocity
+	for (i=0;i<N;i++){
+		vcmx += mass*Vx[i];
+		vcmy += mass*Vy[i];
+		vcmz += mass*Vz[i];
+		mtot += mass;
+	}
+	vcmx /= mtot; vcmy /= mtot; vcmz /= mtot;
+
+	// Subtract the center of mass velocity from each particle's velocity
+	for (i=0;i<N;i++){
+		Vx[i] -= vcmx;
+		Vy[i] -= vcmy;
+		Vz[i] -= vcmz;
+	}
+}
+
 void Euler_integrator(){
 	int i;
 
@@ -259,6 +280,9 @@ int main(int argc, char *argv[])
 
    // read initial conditions
    readxyz();
+
+   // remove the center of mass velocity
+   remove_com_velocity(); 
 
    // write trajectory and print some information
    printout();
