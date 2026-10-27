@@ -1,0 +1,4 @@
+- check esercizio_1.3
+- domanda su esercizio_1.8 (spazio delle fasi -> chain length?)
+- check esercizio_1.10 e 1.11, se lasciarlo così o meno
+- 

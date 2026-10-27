@@ -46,8 +46,6 @@ void read_parameters(char *filename){
 	if( fscanf(fin,"%s %lf ", dummy, &side    ) != 2 ) error();
 	if( fscanf(fin,"%s %lf ", dummy, &kbox    ) != 2 ) error();
 	if( fscanf(fin,"%s %lf ", dummy, &d_cut   ) != 2 ) error();
-	// add a check for d_cut to be less than half the box size if PBC is used
-	if( d_cut >= (side/2.) && kbox <= 0. ) { fprintf(stderr,"ERROR: d_cut is larger than half the box size\n"); error(); }
 
 	//printout parameters to check
 	fprintf(stderr,"nsteps %ld\n" ,nsteps);
@@ -176,7 +174,7 @@ void calc_forces(){
 }
 
 void calc_energies(){
-	int i,j,Nm=0,Nw=0; double d,d5,d10;
+	int i,j,Nm=0,Nw=0; double d,d5,d10,d_cut5,d_cut10;
 
 	ekin=Tm=Tw=0;
 	for(i=0;i<N;i++)
@@ -194,7 +192,7 @@ void calc_energies(){
 	    if(atomtype[i]=='B' && atomtype[i+1]=='B')
 		epot += 0.5*kspring*square( dist(i,i+1) - d0 ) ;
 
-        //scatterers
+    //scatterers
 	for (i=0;i<N;i++)
 	    for(j=0;j<i;j++){
 		if(atomtype[i]=='B' && atomtype[j]=='B') continue;
@@ -202,7 +200,9 @@ void calc_energies(){
 		if(d > d_cut) continue;
 		d5  = d*d*d*d*d;
 		d10 = d5*d5;
-		epot += c_rep/d10;
+		d_cut5  = d_cut*d_cut*d_cut*d_cut*d_cut;
+		d_cut10 = d_cut5*d_cut5;
+		epot += c_rep/d10 - c_rep/d_cut10;
 	    }
 
 	//box (if no PBC)

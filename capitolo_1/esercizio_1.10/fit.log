@@ -1,0 +1,115 @@
+
+*******************************************************************************
+Tue Oct 27 11:49:01 2026
+
+
+FIT:    data read from files[3]
+        format = z
+        #datapoints = 116
+        residuals are weighted equally (unit weight)
+
+function used for fitting: a*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 1.4836138343e+11   0.00e+00  9.16e+04    1.376901e+03
+   3 1.8075307937e+09  -4.40e-06  9.16e+01    8.427178e+02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 1.80753e+09
+rel. change during last iteration : -4.40098e-11
+
+degrees of freedom    (FIT_NDF)                        : 115
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3964.55
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.57177e+07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 842.718          +/- 5.532        (0.6565%)
+
+
+*******************************************************************************
+Tue Oct 27 11:49:01 2026
+
+
+FIT:    data read from files[4]
+        format = z
+        #datapoints = 94
+        residuals are weighted equally (unit weight)
+
+function used for fitting: b*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b            
+   0 7.3593999605e+10   0.00e+00  8.11e+04    1.506951e+03
+   3 1.4036792678e+09  -6.45e-06  8.11e+01    9.922100e+02
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 1.40368e+09
+rel. change during last iteration : -6.44788e-11
+
+degrees of freedom    (FIT_NDF)                        : 93
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3885.01
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.50933e+07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b               = 992.21           +/- 7.443        (0.7501%)
+
+
+*******************************************************************************
+Tue Oct 27 11:50:45 2026
+
+
+FIT:    data read from files_COM_free[3]
+        format = z
+        #datapoints = 71
+        residuals are weighted equally (unit weight)
+
+function used for fitting: a*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a            
+   0 3.4730233276e+10   0.00e+00  3.42e+04    8.427178e+02
+   3 1.4025648669e+09  -9.09e-06  3.42e+01    1.376901e+03
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 1.40256e+09
+rel. change during last iteration : -9.09031e-11
+
+degrees of freedom    (FIT_NDF)                        : 70
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 4476.23
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.00366e+07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 1376.9           +/- 13.1         (0.9513%)
+
+
+*******************************************************************************
+Tue Oct 27 11:50:45 2026
+
+
+FIT:    data read from files_COM_free[4]
+        format = z
+        #datapoints = 68
+        residuals are weighted equally (unit weight)
+
+function used for fitting: b*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b            
+   0 2.7651087309e+10   0.00e+00  3.85e+04    9.922100e+02
+   3 4.9019433844e+08  -2.52e-05  3.85e+01    1.506951e+03
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 4.90194e+08
+rel. change during last iteration : -2.51612e-10
+
+degrees of freedom    (FIT_NDF)                        : 67
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2704.87
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.31633e+06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b               = 1506.95          +/- 8.448        (0.5606%)

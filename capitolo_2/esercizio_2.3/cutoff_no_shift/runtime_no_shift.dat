@@ -1,0 +1,8 @@
+100000 steps
+
+cutoff      runtime
+no cutoff   47s
+1.5         26s
+2.0         26s
+2.5         28s
+5.0         44s

@@ -20,7 +20,7 @@ long int print;    //print every these steps
 double *x,*y,*z,*Vx,*Vy,*Vz,*Fx,*Fy,*Fz;
 double *xprev,*yprev,*zprev,*xtmp,*ytmp,*ztmp; // to store the old coordinates for Verlet
 double *x0,*yy0,*z0,*Vx0,*Vy0,*Vz0; //initial coords and velocities (y0 is bessel function in mathlib)
-double epot,ekin,etot,Vcom;
+double epot,ekin,etot;
 char inputxyz[30],trajfile[30];
 FILE *ftraj,*frec;
 
@@ -140,30 +140,6 @@ void calc_energies(){
 	    epot += 0.5*kspring*square( dist(i,i+1) - d0 );
 
 	etot=ekin+epot;
-}
-
-void remove_com_velocity(){
-	int i;
-	double vcmx=0, vcmy=0, vcmz=0, mtot=0;
-
-	// Compute the center of mass velocity
-	for (i=0;i<N;i++){
-		vcmx += mass*Vx[i];
-		vcmy += mass*Vy[i];
-		vcmz += mass*Vz[i];
-		mtot += mass;
-	}
-	vcmx /= mtot; vcmy /= mtot; vcmz /= mtot;
-
-	// Subtract the center of mass velocity from each particle's velocity
-	for (i=0;i<N;i++){
-		Vx[i] -= vcmx;
-		Vy[i] -= vcmy;
-		Vz[i] -= vcmz;
-	}
-
-	// Compute the COM velocity
-	Vcom = sqrt( square(vcmx) + square(vcmy) + square(vcmz) );
 }
 
 void Euler_integrator(){
@@ -333,9 +309,6 @@ int main(int argc, char *argv[])
 
    // read initial conditions
    readxyz();
-
-   // remove center of mass velocity
-   remove_com_velocity();
 
    // write trajectory and print some information
    printout();

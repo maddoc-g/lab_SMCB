@@ -1,0 +1,3 @@
+MD dynamics of spring chain with velocity Verlet integrator
+The integrator produces trajectories with COM linear velociy removed, 
+the temperatures are instead calculated both with and without COM velocity correction

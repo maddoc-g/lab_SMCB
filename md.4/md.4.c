@@ -186,7 +186,7 @@ void calc_energies(){
 	//chain
 	for (i=0;i<N-1;i++)
 	    if(atomtype[i]=='B' && atomtype[i+1]=='B')
-		epot += 0.5*kspring*square( dist(i,i+1) - d0 ) ;
+		epot += 0.5*kspring*square( dist(i,i+1) - d0 );
 
         //scatterers
 	for (i=0;i<N;i++)

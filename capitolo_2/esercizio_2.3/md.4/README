@@ -1,0 +1,2 @@
+MD simulation of a spring-mass chain surrounded by fluid particles, with periodic boundaries or confining box.
+To reduce execution time when using PBCs md.4.cutoff.c implements a cutoff distance in the force calculation for the fluid particles.
