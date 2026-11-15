@@ -1,0 +1,36 @@
+
+
+*******************************************************************************
+Thu Nov  5 11:48:39 2026
+
+
+FIT:    data read from 'avg_q.dat' u 1:2
+        format = x:z
+        #datapoints = 1001
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*(1-exp(-x/b))
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 7.1609201466e+00   0.00e+00  6.61e-01    1.000000e+00   1.000000e+02
+   4 7.0549712028e-01  -2.28e-01  6.61e-05    9.078031e-01   9.300503e+01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.705497
+rel. change during last iteration : -2.28166e-06
+
+degrees of freedom    (FIT_NDF)                        : 999
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0265745
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000706203
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.907803         +/- 0.001041     (0.1147%)
+b               = 93.005           +/- 0.6491       (0.698%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.493  1.000 

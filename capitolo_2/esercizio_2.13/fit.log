@@ -1,0 +1,37 @@
+
+
+*******************************************************************************
+Thu Nov 12 17:18:34 2026
+
+
+FIT:    data read from data[5] u ($1/1000):($4/(k_b*T*T*$6))
+        format = x:z
+        x range restricted to [0.500000 : 2.00000]
+        #datapoints = 751
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = 1 + a*exp(-x/t)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             t            
+   0 4.5148835004e+01   0.00e+00  3.39e-01    1.000000e+00   1.000000e+00
+   5 1.8055711250e-01  -1.54e-11  3.39e+03    4.932193e-01   6.174153e-01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.180557
+rel. change during last iteration : -1.53722e-16
+
+degrees of freedom    (FIT_NDF)                        : 749
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0155262
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000241064
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.493219         +/- 0.008514     (1.726%)
+t               = 0.617415         +/- 0.007804     (1.264%)
+
+correlation matrix of the fit parameters:
+                a      t      
+a               1.000 
+t              -0.944  1.000 
