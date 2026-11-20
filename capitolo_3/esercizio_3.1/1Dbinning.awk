@@ -2,7 +2,7 @@
 #
 #  takes a column and prints the binned probability distribution
 BEGIN{
-    col=7; nbins=30; tmin=100; if(tmax=="") tmax=1e6
+    col=6; nbins=30; tmin=100; if(tmax=="") tmax=1e6
 }
 !/#/&&$1>tmin&&$1<tmax{
     n++
